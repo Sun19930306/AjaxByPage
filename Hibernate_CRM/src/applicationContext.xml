@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.3.xsd 
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+   <!--  配置CustomerDao对象-->
+   <bean name="customerDao" class="com.qf.dao.impl.CustomerDaoImpl"></bean>
+   <!--  配置CustomerService对象-->
+   <bean name="customerService" class="com.qf.service.impl.CustomerServiceImpl">
+      <!-- 给service注入dao层对象 -->
+     <property name="customerDao" ref="customerDao"></property>
+   </bean>
+</beans>

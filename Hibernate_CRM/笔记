@@ -1,0 +1,13 @@
+1
+2.加入需要的jar包：hibernate的jar，mysql的jar
+3.一定要是分层思想和MVC模式
+     分包：
+     点击左边的菜单栏 客户管理----新增客户----customer/add.jsp ----- 提交Servlet(AddCustomerServlet)
+     
+     AddCustomerServlet.java
+     1.获取请求参数并封装成实体类Customer.java    BeanUtils
+     2.调用service层新增客户-------调用dao层(hibernate操作dao层增删查改 save(Customer))  事务：service层：
+     3.成功，失败
+     
+     
+     
